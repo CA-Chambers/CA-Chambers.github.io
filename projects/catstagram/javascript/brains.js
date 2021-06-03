@@ -25,7 +25,7 @@ var user={
 'name':"Ceddrick",
 'name_last':"Chambers",
 'followers':["ceddylove", "buffy", "Bee", "coco", "maji"],
-'profile_pic':"https://i.pinimg.com/originals/a0/e7/c5/a0e7c5e878b9a465eb3247169a14bdd6.jpg",
+'profile_pic':"https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F1242d542-d15f-11e8-b8d4-d6fb90acb7b1.jpg?crop=4740%2C2666%2C0%2C66&resize=1180",
 'bio':"Hi my name is Ceddrick Chambers and this is my Catsagram,and it's about cats!!!!"
 }
  setTimeout(function(){ document.getElementById("name").innerHTML = user.name;}, 3000);
