@@ -50,16 +50,15 @@ function runProgram(){
   function handleKeyDown(event) {
       if (event.which === KEY.LEFT){
           speedX = -5;
-          speedY = -5;
       } else if (event.which === KEY.UP){
-          console.log("up");
+           speedY = -5;
       } else if (event.which === KEY.RIGHT){
-         console.log("right")
+           speedX = 5;
       } else{
-          console.log("down")
-      }
+          
+          speedY = 5;
   }
-
+  }
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -72,13 +71,12 @@ function runProgram(){
     $(document).off();
 
   }
-} 
- function repositionGameItem(){
+   function repositionGameItem(){
     positionX += speedX;
-    positionY += speedY;
-    
+    positionY += speedY; 
 }
  function redrawGameItem(){
 $("#gameItem").css("left", positionX);  
 $("#gameItem").css("top", positionY);  
  }
+} 
