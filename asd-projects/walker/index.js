@@ -39,10 +39,9 @@ function runProgram(){
   by calling this function and executing the code inside.
   */
   function newFrame() {
- repositionGameItem();{
-    positionY += speedY;
-    positionX += speedX;
-}
+    repositionGameItem()
+    redrawGameItem()
+  
   }
   
   /* 
@@ -73,14 +72,13 @@ function runProgram(){
     $(document).off();
 
   }
-
-}
-
-repositionGameItem();{
-    positionY += speedY;
+} 
+ function repositionGameItem(){
     positionX += speedX;
+    positionY += speedY;
+    
 }
- redrawGameItem();{
-$("#box").css("left", positionX);  
-$("#box").css("top", positionY);  
+ function redrawGameItem(){
+$("#gameItem").css("left", positionX);  
+$("#gameItem").css("top", positionY);  
  }
