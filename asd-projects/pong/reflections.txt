@@ -1,0 +1,29 @@
+User Story / Gameplay
+1) Pong is a game played by two players who each control a paddle placed at opposite sides of the screen. A ball is hit back and forth between the two paddles, and the top and bottom walls, until the ball goes past one player's paddle.
+2) the ball my bounce towards the right or left to start.
+3) the game will end once one player gets to 11 points, maybe there can be and end screen and rest
+4) -if  player 1 gets to 11, end game and if player 2 gets to 11 points end game 
+   - if ball hits player 1 paddle, bounce left or right, and if it hits player 2 paddle bounce left or right
+   - if ball hits boardHight, bounce -top/up and if ball hits bottom, bounce up/top.
+   - if ball goes past (the side of player 1), player 2 gets 1 point and if ball goes past (the side of player 2), player 1 gets 1 point 
+ Visual Game Components
+   the ball, the paddles, the board, the invisible line
+   the ball will be animated 
+     will need position x,position y, speed x, speed y (position for up)
+    the paddles will be animated 
+     will need position x,position y, speed x, speed y (position for up)
+    the board will be static
+     will need absolote position x, absolote position y
+    the invisible line will be static
+     will need absolote position x, absolote position y
+    the score box will be static
+     will need absolote position x, absolote position y
+Events / Logic
+  when up is pressed, paddle for player () will move up and when down arrow is pressed, paddle for player() will move down
+   gameItem update position
+   when w key is pressed, paddle for player() will move up and when s is pressed, paddle for player() will move down
+   gameItem update position
+  when point is scored, ball will return to center and move randomly until it hit paddle
+  when point is scored, score will apper in top right of the left by players starting area
+  when point is scored, paddle will return to starting position
+   
