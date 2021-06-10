@@ -55,7 +55,6 @@ function runProgram(){
       } else if (event.which === KEY.RIGHT){
            speedX = 5;
       } else{
-
           speedY = 5;
   }
   }
