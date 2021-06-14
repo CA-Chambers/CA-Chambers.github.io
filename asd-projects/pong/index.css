@@ -9,20 +9,20 @@ body {
   border: 1px solid white;
   background-color: black;
   position: relative;
-}
-
+} 
 #gameItem {
      /* appearance */
-  background-color: white;
+  background-color: hsl(50, 33%, 25%);;
   width: 20px;
   height: 20px;
-   border-radius: 20px;
+   border-radius: 10px;
     /* positioning */
    position: absolute;
    left: 100px;  /* Uncomment if you want to set a "starting" position */
    top: 100px;   /* Uncomment if you want to set a "starting" position */
 }
-#id {
+
+#leftPaddle {
   /* appearance */
   background-color: white;
   width: 20px;
@@ -31,6 +31,20 @@ body {
   
   /* positioning */
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 200px;
+  left: 200px;
 }
+
+#rightPaddle {
+  /* appearance */
+  background-color: white;
+  width: 20px;
+  height: 80px;
+  border-radius: 20px;
+  
+  /* positioning */
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
