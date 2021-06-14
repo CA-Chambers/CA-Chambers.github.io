@@ -47,7 +47,7 @@ function runProgram(){
   /* 
   Called in response to events.
   */
-  function handleKeyDown(event) {
+ function handleKeyDown(event) {
       if (event.which === KEY.LEFT){
           speedX = -5;
       } else if (event.which === KEY.UP){

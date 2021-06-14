@@ -10,6 +10,7 @@ body {
   background-color: black;
   position: relative;
 } 
+
 #ball {
      /* appearance */
   background-color: hsl(88, 83%, 47%);
@@ -41,7 +42,7 @@ body {
   width: 20px;
   height: 80px;
   border-radius: 20px;
-  
+
   /* positioning */
   position: absolute;
   top: 50px;
@@ -60,6 +61,7 @@ body {
   height: 50px;
   border: 1px solid rgb(18, 231, 221);
   background-color: black;
+   /* positioning */
   position: relative;
   top: 335px;
   left: 390px;
