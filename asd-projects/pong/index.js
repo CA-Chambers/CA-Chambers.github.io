@@ -18,7 +18,17 @@ function runProgram(){
    }
   
   // Game Item Objects
-
+function GameObject(id) {
+  return{
+    id: id,
+    x: parseFloat($(id).css('left')),
+    y: parseFloat($(id).css('top')),
+    width: $(id).width(),
+    height: $(id).height(),
+    speedX: 0,
+    speedY:0
+  }
+}
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -33,8 +43,8 @@ function runProgram(){
   by calling this function and executing the code inside.
   */
   function newFrame() {
-     repositionleftPaddle()
-     repositionrightPaddle()
+     moveGameItem(leftPaddle);
+     moveGameItem(rightPaddle);
 
   }
   
@@ -48,8 +58,8 @@ function runProgram(){
           speedY = 5;
       }
   }
- function handleKeyup(event) {
-if (event.which === KEY.W){
+    function handleKeyup(event) {
+      if (event.which === KEY.LEFT){
           speedX = 0;
       }else{
           speedY = 0;
@@ -68,5 +78,30 @@ if (event.which === KEY.W){
     // turn off event handlers
     $(document).off();
   }
+  function doCollide(square1, square2) {
+    // TODO: calculate and store the remaining
+    // sides of the square1
+    square1.leftX = square1.x;
+    square1.topY = square1.y;
+    square1.bottomY = square1.y + square1.height; 
+    square1.rightX = square1.x + square1.width;
+    
+    // TODO: Do the same for square2
+    square2.leftX = square2.x;
+    square2.topY = square2.y;
+    square2.bottomY = square2.y + square2.height; 
+    square2.rightX = square2.x + square2.width;
   
+    // TODO: Return true if they are overlapping, false otherwise
+	if (square1.rightX > square2.leftX &&
+        square1.leftX < square2.rightX &&
+        square1.bottomY > square2.topY &&
+        square1.topY < square2.bottomY) {
+      return true;
+    }
+  else{
+    return false;
+  }
+}
+
 }
