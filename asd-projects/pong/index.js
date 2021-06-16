@@ -31,7 +31,7 @@ function GameObject(id) {
 }
 var leftPaddle = GameObject('#leftPaddle'); 
 var rightPaddle = GameObject('#rightPaddle');
-var ball = GameObject('#ball')
+var ball = GameObject('#ball');
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -48,6 +48,7 @@ var ball = GameObject('#ball')
   function newFrame() {
      moveGameItem(leftPaddle);
      moveGameItem(rightPaddle);
+     moveGameItem(ball);
 
   }
   
@@ -106,5 +107,11 @@ var ball = GameObject('#ball')
     return false;
   }
 }
+ function repositionGameItem(){
+  $(leftPaddle).css("top", leftPaddle.Y);  
+  $(rightPaddle).css("top", rightPaddle.Y);  
 
+$(ball).css("left", ball.X);  
+$(ball).css("top", ball.Y);  
+ }
 }

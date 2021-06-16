@@ -84,9 +84,9 @@ function runProgram(){
    function repositionGameItem(){
     positionX += speedX;
     positionY += speedY; 
-}
- function redrawGameItem(){
+ function redrawGameItem (){
 $("#gameItem").css("left", positionX);  
-$("#gameItem").css("top", positionY);  
+$("#gameItem").css("top", positionY);
+ }  
  }
 } 
