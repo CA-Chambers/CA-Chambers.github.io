@@ -29,9 +29,8 @@ function GameObject(id) {
     speedY:0
   }
 }
-var leftPaddle = doCollide; 
-
-var rightPaddle = doCollide;
+var leftPaddle = GameObject; 
+var rightPaddle = GameObject;
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
