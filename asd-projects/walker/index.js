@@ -84,6 +84,7 @@ function runProgram(){
    function repositionGameItem(){
     positionX += speedX;
     positionY += speedY; 
+   }
  function redrawGameItem (){
 $("#gameItem").css("left", positionX);  
 $("#gameItem").css("top", positionY);

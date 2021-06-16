@@ -107,11 +107,11 @@ var ball = GameObject('#ball');
     return false;
   }
 }
- function repositionGameItem(){
-  $(leftPaddle).css("top", leftPaddle.Y);  
-  $(rightPaddle).css("top", rightPaddle.Y);  
+ function moveGameItem(whichOBject){
+    whichOBject.x += whichOBject.speedX;
+    whichOBject.y +=  whichOBject.speedY; 
 
-$(ball).css("left", ball.X);  
-$(ball).css("top", ball.Y);  
+  $(whichOBject.id).css("left", whichOBject.X);  
+  $(whichOBject.id).css("top", whichOBject.Y);  
  }
 }
