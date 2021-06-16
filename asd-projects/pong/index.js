@@ -29,17 +29,9 @@ function GameObject(id) {
     speedY:0
   }
 }
-var leftPaddle = {};
-leftPaddle.$element = $("#leftPaddle");
-leftPaddle.x = 100;   // same as "left"
-leftPaddle.y = 50;    // same as "top"
-// speedX and speedY aren't needed for now
+var leftPaddle = doCollide; 
 
-var rightPaddle = {};
-rightPaddle.$element = $("#rightPaddle");
-rightPaddle.x = 100;   // same as "left"
-rightPaddle.y = 50;    // same as "top"
-// speedX and speedY aren't needed for now
+var rightPaddle = doCollide;
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
