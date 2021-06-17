@@ -90,4 +90,4 @@ $("#gameItem").css("left", positionX);
 $("#gameItem").css("top", positionY);
  }  
  }
-} 
+

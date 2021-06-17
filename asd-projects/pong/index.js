@@ -57,17 +57,26 @@ var ball = GameObject('#ball');
   */
   function handleKeyDown(event) {
      if (event.which === KEY.UP){
-          speedX = -5;
-      }else{
-          speedY = 5;
+          leftPaddle.speedY = -5;
+      }else if(event.which === KEY.DOWN){
+          leftPaddle.speedY = 5;
+      } else if (event.which === KEY.UPW){
+          rightPaddle.speedY = -5;
+      } else{
+          rightPaddle.speedY = 5;
       }
+        
   }
     function handleKeyup(event) {
-      if (event.which === KEY.LEFT){
-          speedX = 0;
+      if (event.which === KEY.UPW){
+         rightPaddle.speedY = -5;
+      }else if(event.which === KEY.DOWNS){
+         rightPaddle.speedY = 5;
+      }else if (event.which === KEY.UP){
+          leftPaddle.speedY = -5;
       }else{
-          speedY = 0;
-      } 
+          leftPaddle.speedY = 5;
+      }
  }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -111,7 +120,7 @@ var ball = GameObject('#ball');
     whichOBject.x += whichOBject.speedX;
     whichOBject.y +=  whichOBject.speedY; 
 
-  $(whichOBject.id).css("left", whichOBject.X);  
-  $(whichOBject.id).css("top", whichOBject.Y);  
+  $(whichOBject.id).css("left", whichOBject.x);  
+  $(whichOBject.id).css("top", whichOBject.y);  
  }
 }
