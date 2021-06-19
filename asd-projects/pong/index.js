@@ -57,25 +57,25 @@ var ball = GameObject('#ball');
   */
   function handleKeyDown(event) {
      if (event.which === KEY.UP){
-          leftPaddle.speedY = -5;
+          leftPaddle.speedY = 0;
       }else if(event.which === KEY.DOWN){
-          leftPaddle.speedY = 5;
-      } else if (event.which === KEY.UPW){
-          rightPaddle.speedY = -5;
-      } else{
-          rightPaddle.speedY = 5;
+          leftPaddle.speedY = 0;
+      } else if (event.which === KEY.W){
+          rightPaddle.speedY = 0;
+      } else if(event.which === KEY.S){
+          rightPaddle.speedY = 0;
       }
         
   }
     function handleKeyup(event) {
-      if (event.which === KEY.UPW){
-         rightPaddle.speedY = -5;
-      }else if(event.which === KEY.DOWNS){
-         rightPaddle.speedY = 5;
+      if (event.which === KEY.W){
+         rightPaddle.speedY = 0;
+      }else if(event.which === KEY.S){
+         rightPaddle.speedY = 0;
       }else if (event.which === KEY.UP){
-          leftPaddle.speedY = -5;
-      }else{
-          leftPaddle.speedY = 5;
+          leftPaddle.speedY = 0;
+      }else if (event.which === KEY.DOWN){
+          leftPaddle.speedY = 0;
       }
  }
 
