@@ -16,7 +16,7 @@ function runProgram(){
        "W": 87, //up
        "S": 83, //down
    }
-  
+   
   // Game Item Objects
 function GameObject(id) {
   return{
@@ -26,12 +26,20 @@ function GameObject(id) {
     width: $(id).width(),
     height: $(id).height(),
     speedX: 0,
-    speedY:0
+    speedY: 0
   }
 }
 var leftPaddle = GameObject('#leftPaddle'); 
 var rightPaddle = GameObject('#rightPaddle');
-var ball = GameObject('#ball');
+var ball = GameObject("#ball");
+var ball = GameObject("#ball", 0, 0, (Math.random() * 4), (Math.random() * 4));
+var ball = {};
+ball.speedX = 1;
+ball.speedY = 1;
+
+  //UI Elements 
+  var scorePlayer1 = 0;
+  var scorePlayer2 = 0;
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -51,19 +59,26 @@ var ball = GameObject('#ball');
      moveGameItem(ball);
 
   }
+  if (doCollide(ball, leftPaddle) === true){
+    ballspeedX = -5 // bounce ball off left paddle
+  }
+  if (doCollide(ball, rightPaddle) === true){
+    ballspeedX = 5 // bounce ball off right paddle
+  }
+  
   
   /* 
   Called in response to events.
   */
   function handleKeyDown(event) {
      if (event.which === KEY.UP){
-          leftPaddle.speedY = 0;
+          leftPaddle.speedY = -5;
       }else if(event.which === KEY.DOWN){
-          leftPaddle.speedY = 0;
+          leftPaddle.speedY = 5;
       } else if (event.which === KEY.W){
-          rightPaddle.speedY = 0;
+          rightPaddle.speedY = -5;
       } else if(event.which === KEY.S){
-          rightPaddle.speedY = 0;
+          rightPaddle.speedY = 5;
       }
         
   }
