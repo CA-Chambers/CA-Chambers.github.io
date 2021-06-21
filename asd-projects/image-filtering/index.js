@@ -27,10 +27,13 @@ function applyFilter(){
 
         rgbNumbers[RED] = 255;
 
-        var rgbString = rgbStringToArray(rgbNumbers);
+        var rgbString = rgbArrayToString(rgbNumbers);
 
         image[r][c] = rgbString;
      }
+    }
+    function reddify(){
+        rgbNumbers[RED] = 255;  
     }
 }
 
