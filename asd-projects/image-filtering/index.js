@@ -18,8 +18,10 @@ $(document).ready(function(){
 
 // TODO 1 & 3: Create the applyFilter function here
 function applyFilter(){
-    for(var i = 0; i <image.length; i++){
-        var rgbString = ;
+    for(var r = 0; r < image.length; r++){
+     for(var c = 0; c < image[r].length; c++){
+
+     }
     }
 }
 
