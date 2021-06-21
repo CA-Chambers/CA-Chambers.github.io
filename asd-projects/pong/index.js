@@ -32,8 +32,7 @@ function GameObject(id) {
 var leftPaddle = GameObject('#leftPaddle'); 
 var rightPaddle = GameObject('#rightPaddle');
 var ball = GameObject("#ball");
-var ball = GameObject("#ball", 0, 0, (Math.random() * 4), (Math.random() * 4));
-var ball = {};
+
 ball.speedX = 1;
 ball.speedY = 1;
 
@@ -60,10 +59,10 @@ ball.speedY = 1;
 
   }
   if (doCollide(ball, leftPaddle) === true){
-    ballspeedX = -5 // bounce ball off left paddle
+    ball.speedX = 1; // bounce ball off left paddle
   }
   if (doCollide(ball, rightPaddle) === true){
-    ballspeedX = 5 // bounce ball off right paddle
+    ball.speedX = 1; // bounce ball off right paddle
   }
   
   

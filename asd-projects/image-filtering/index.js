@@ -17,7 +17,11 @@ $(document).ready(function(){
 /////////////////////////////////////////////////////////
 
 // TODO 1 & 3: Create the applyFilter function here
-
+function applyFilter(){
+    for(var i = 0; i <image.length; i++){
+        var rgbString = ;
+    }
+}
 
 // TODO 5: Create the applyFilterNoBackground function
 
