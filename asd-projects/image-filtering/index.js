@@ -4,7 +4,7 @@ $(document).ready(function(){
     const $display = $('#display');
 
     // TODO: Call your apply function(s) here
-
+    applyFilter();
 
 
 
@@ -23,15 +23,13 @@ function applyFilter(){
 
         var rgbString = image[r][c];
 
-        var rgbNumbers = rgbStringToArray(c);
+        var rgbNumbers = rgbStringToArray(rgbString);
 
         rgbNumbers[RED] = 255;
 
         var rgbString = rgbStringToArray(rgbNumbers);
 
         image[r][c] = rgbString;
-
-
      }
     }
 }
