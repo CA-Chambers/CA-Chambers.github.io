@@ -41,6 +41,6 @@ function applyFilter(){
 
 
 // TODO 2 & 4: Create filter functions
-
-
+var decreaseBlue = Math.random() * 10;
+ decreaseBlue =  Math.max(num - 5, 0);
 // CHALLENGE code goes below here
