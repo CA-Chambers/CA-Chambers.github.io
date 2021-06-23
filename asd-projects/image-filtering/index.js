@@ -4,7 +4,7 @@ $(document).ready(function(){
     const $display = $('#display');
 
     // TODO: Call your apply function(s) here
-    applyFilter();
+    applyFilter(reddify);
 
 
 
@@ -17,13 +17,13 @@ $(document).ready(function(){
 /////////////////////////////////////////////////////////
 
 // TODO 1 & 3: Create the applyFilter function here
-function applyFilter(){
+function applyFilter(filterFunction){
     for(var r = 0; r < image.length; r++){
      for(var c = 0; c < image[r].length; c++){
 
         var rgbString = image[r][c];
 
-        var rgbNumbers = rgbStringToArray(rgbString);
+        var rgbNumbers = filterFunction(rgbNumbers);
 
         rgbNumbers[RED] = 255;
 
@@ -32,15 +32,13 @@ function applyFilter(){
         image[r][c] = rgbString;
      }
     }
-    function reddify(){
-        rgbNumbers[RED] = 255;  
-    }
 }
 
 // TODO 5: Create the applyFilterNoBackground function
 
 
 // TODO 2 & 4: Create filter functions
-var decreaseBlue = Math.random() * 10;
- decreaseBlue =  Math.max(num - 5, 0);
+ function reddify(){
+        rgbNumbers[RED] = 255;  
+    }
 // CHALLENGE code goes below here
