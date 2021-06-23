@@ -20,12 +20,12 @@ $(document).ready(function(){
 function applyFilter(filterFunction){
     for(var r = 0; r < image.length; r++){
      for(var c = 0; c < image[r].length; c++){
-
+    
         var rgbString = image[r][c];
 
         var rgbNumbers = rgbStringToArray(rgbString);
 
-        rgbNumbers[RED] = 255;
+        filterFunction(rgbNumbers);
 
         var rgbString = rgbArrayToString(rgbNumbers);
 
