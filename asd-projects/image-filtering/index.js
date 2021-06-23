@@ -23,7 +23,7 @@ function applyFilter(filterFunction){
 
         var rgbString = image[r][c];
 
-        var rgbNumbers = filterFunction(rgbNumbers);
+        var rgbNumbers = rgbStringToArray(rgbString);
 
         rgbNumbers[RED] = 255;
 
@@ -38,7 +38,7 @@ function applyFilter(filterFunction){
 
 
 // TODO 2 & 4: Create filter functions
- function reddify(){
+ function reddify(red){
         rgbNumbers[RED] = 255;  
     }
 // CHALLENGE code goes below here
