@@ -39,7 +39,24 @@ function decreaseBlue(rgbNumbers){
     rgbNumbers[BLUE] = Math.max(0, rgbNumbers[BLUE] - 30);
 }
 function increaseGreenByBlue(rgbNumbers){
-rgbNumbers[GREEN] = MATH.min(90, rgbNumbers[GREEN] + rgbNumbers[BLUE])
+rgbNumbers[GREEN] = Math.min(255, rgbNumbers[GREEN] + rgbNumbers[BLUE]);
+}
+function applyFilterNoBackground(filterFunction){
+    for(var r = 0; r < image.length; r++){
+        for(var c = 0; c < image[r].length; c++){
+            
+       if(image[0][0] !== image[r][c]);
+           var rgbString = image[r][c];
+   
+           var rgbNumbers = rgbStringToArray(rgbString);
+   
+           filterFunction(rgbNumbers);
+   
+           var rgbString = rgbArrayToString(rgbNumbers);
+   
+           image[r][c] = rgbString;
+        }
+       }
 }
 // TODO 2 & 4: Create filter functions
  function reddify(rgbNumbers){
