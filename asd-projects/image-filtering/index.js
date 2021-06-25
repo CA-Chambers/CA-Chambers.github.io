@@ -41,10 +41,11 @@ function decreaseBlue(rgbNumbers){
 function increaseGreenByBlue(rgbNumbers){
 rgbNumbers[GREEN] = Math.min(255, rgbNumbers[GREEN] + rgbNumbers[BLUE]);
 }
+
 function applyFilterNoBackground(filterFunction){
     for(var r = 0; r < image.length; r++){
         for(var c = 0; c < image[r].length; c++){
-            
+
        if(image[0][0] !== image[r][c]);
            var rgbString = image[r][c];
    

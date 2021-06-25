@@ -56,14 +56,16 @@ ball.speedY = 1;
      moveGameItem(leftPaddle);
      moveGameItem(rightPaddle);
      moveGameItem(ball);
+      
+     if (doCollide(ball, leftPaddle) === true){
+      ball.speedX = 1; // bounce ball off left paddle
+     }
+     if (doCollide(ball, rightPaddle) === true){
+      ball.speedX = -1; // bounce ball off right paddle
+     }
 
   }
-  if (doCollide(ball, leftPaddle) === true){
-    ball.speedX = 1; // bounce ball off left paddle
-  }
-  if (doCollide(ball, rightPaddle) === true){
-    ball.speedX = 1; // bounce ball off right paddle
-  }
+  
   
   
   /* 
