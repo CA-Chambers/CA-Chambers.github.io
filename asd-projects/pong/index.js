@@ -63,7 +63,9 @@ ball.speedY = 1;
      if (doCollide(ball, rightPaddle) === true){
       ball.speedX = 1; // bounce ball off right paddle
      }
-
+     if(doCollide(board, rightPaddle) === true){
+      board.speedX = 0;
+      }
   }
   
   
