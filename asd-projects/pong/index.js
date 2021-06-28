@@ -64,13 +64,15 @@ ball.speedY = 1;
      if (doCollide(ball, rightPaddle) === true){
       ball.speedX = 1; // bounce ball off right paddle
      }
-     if (board < leftPaddle.y){
-       leftPaddle.y = 422;
-     } 
-     if (board < rightPaddle.x){
-      rightPaddle.x = 422;
+     if (ball.y > board.height){
+      ball.speedY = -1;
+    } 
+    if (ball.x <  0){
+      ball.speedX = 1;
     }
-        
+    if (ball.x > board.width){
+      ball.speedX = 1;
+    }  
   }
   
 
