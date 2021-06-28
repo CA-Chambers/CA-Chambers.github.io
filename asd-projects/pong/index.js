@@ -32,6 +32,7 @@ function GameObject(id) {
 var leftPaddle = GameObject('#leftPaddle'); 
 var rightPaddle = GameObject('#rightPaddle');
 var ball = GameObject("#ball");
+var boardHeight = jQuery(window).height();
 
 ball.speedX = 1;
 ball.speedY = 1;
@@ -63,11 +64,16 @@ ball.speedY = 1;
      if (doCollide(ball, rightPaddle) === true){
       ball.speedX = 1; // bounce ball off right paddle
      }
-     if(doCollide(board, rightPaddle) === true){
-      board.speedX = 0;
-      }
+     if (boardHeight < leftPaddle.y){
+       leftPaddle.y = 422;
+     } 
+     if (boardHeight < rightPaddle.x){
+      rightPaddle.x = 422;
+    }
+        
   }
   
+
   
   
   /* 
