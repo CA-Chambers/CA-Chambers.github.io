@@ -34,7 +34,7 @@ var rightPaddle = GameObject('#rightPaddle');
 var ball = GameObject("#ball");
 var board = GameObject("#board");
 
-ball.speedX = 1;
+ball.speedX = 2;
 ball.speedY = 1;
 
   //UI Elements 
@@ -71,7 +71,10 @@ ball.speedY = 1;
       ball.speedX = 1;
     }
     if (ball.x > board.width){
-      ball.speedX = 1;
+      ball.speedX = -1;
+    }
+    if (ball.y <  0){
+      ball.speedY = 1;
     }  
   }
   
