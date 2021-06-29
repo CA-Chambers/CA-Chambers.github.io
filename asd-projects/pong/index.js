@@ -33,13 +33,16 @@ var leftPaddle = GameObject('#leftPaddle');
 var rightPaddle = GameObject('#rightPaddle');
 var ball = GameObject("#ball");
 var board = GameObject("#board");
+var scorePlayer1 = GameObject("#scorePlayer1");
+var scorePlayer2 = GameObject("#scorePlayer2");
+
 
 ball.speedX = 2;
 ball.speedY = 1;
 
   //UI Elements 
-  var scorePlayer1 = 0;
-  var scorePlayer2 = 0;
+   scorePlayer1 = 0;
+   scorePlayer2 = 0;
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -75,7 +78,10 @@ ball.speedY = 1;
     }
     if (ball.y <  0){
       ball.speedY = 1;
-    }  
+    }
+    if(rightPaddle.x < board.height){
+       rightPaddle.speedX = 1;
+    }
   }
   
 
